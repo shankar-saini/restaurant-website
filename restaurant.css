@@ -1,0 +1,401 @@
+/* ---------- Basic setup ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+    color: #3b2f2f;
+    background-color: #ffffff;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+    color: #5b1a1a;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+/* ---------- Header / Navbar ---------- */
+.header {
+    background-color: #5b1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.brand {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.brand span {
+    color: #f2b04a;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.menu-list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 8px 14px;
+    border-radius: 20px;
+}
+
+.menu-list a:hover {
+    background-color: #f2b04a;
+    color: #5b1a1a;
+}
+
+/* ---------- Home / Hero ---------- */
+.hero {
+    /* hero image + dark overlay so the text stays readable */
+    background: linear-gradient(rgba(40, 12, 8, 0.55), rgba(40, 12, 8, 0.55)), url("hero.png") center / cover no-repeat;
+    background-color: #8a2a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 44px;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    font-size: 19px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #5b1a1a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+}
+
+.hero-btn:hover {
+    background-color: #5b1a1a;
+    color: #ffffff;
+}
+
+/* ---------- Sections ---------- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.alt {
+    background-color: #fff6e8;
+}
+
+.container h2 {
+    font-size: 32px;
+    display: inline-block;
+    border-bottom: 3px solid #e8a33d;
+    padding-bottom: 6px;
+    margin-bottom: 22px;
+}
+
+.container h3 {
+    font-size: 22px;
+    margin: 22px 0 8px;
+}
+
+/* ---------- Banner (image ki jagah) ---------- */
+.banner {
+    height: 150px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    letter-spacing: 8px;
+    margin-bottom: 22px;
+}
+
+
+/* ---------- Menu cards ---------- */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.dish-card {
+    background-color: #ffffff;
+    border: 1px solid #ead9bd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.dish-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pic {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.banner-img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 22px;
+}
+
+
+.dish-card h3 {
+    padding: 0 12px;
+    margin: 14px 0 6px;
+    font-size: 19px;
+}
+
+.dish-card p {
+    padding: 0 14px;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.dish-card .price {
+    font-weight: bold;
+    font-size: 18px;
+    color: #c4571f;
+    padding-bottom: 14px;
+    margin-bottom: 0;
+}
+
+/* ---------- Menu table ---------- */
+.container .table-title {
+    margin-top: 40px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-table th,
+.menu-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.menu-table th {
+    background-color: #5b1a1a;
+    color: #ffffff;
+}
+
+.menu-table tbody tr:nth-child(even) {
+    background-color: #fff6e8;
+}
+
+.menu-table tbody tr:hover {
+    background-color: #fde3bd;
+}
+
+.menu-table td:nth-child(3) {
+    font-weight: bold;
+}
+
+.menu-table td:nth-child(4) {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* ---------- Reservation form ---------- */
+.reservation-form {
+    max-width: 520px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 24px;
+    margin-top: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.field {
+    margin-bottom: 16px;
+}
+
+.field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.field textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: 2px solid #e8a33d;
+    border-color: #e8a33d;
+}
+
+.submit-btn {
+    background-color: #c4571f;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #5b1a1a;
+}
+
+/* ---------- Contact ---------- */
+.contact-list {
+    list-style: none;
+    margin-bottom: 22px;
+}
+
+.contact-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ead9bd;
+}
+
+.contact-list a {
+    color: #c4571f;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.map-btn {
+    display: inline-block;
+    background-color: #5b1a1a;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+}
+
+.map-btn:hover {
+    background-color: #c4571f;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    background-color: #5b1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 22px 20px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .small {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .hero {
+        padding: 60px 16px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .container {
+        padding: 36px 16px;
+    }
+
+    .banner-img {
+        height: 150px;
+    }
+
+    .banner {
+        font-size: 34px;
+        height: 110px;
+    }
+
+    .menu-table th,
+    .menu-table td {
+        padding: 9px 10px;
+        font-size: 14px;
+    }
+}
+
+.footer a {
+    color: #f2b04a;
+}
